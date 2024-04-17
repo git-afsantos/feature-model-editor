@@ -18,6 +18,7 @@ import ConstraintEditor from './feature-model/ConstraintEditor';
 import Flow from './feature-model/Flow';
 import Controls from './Controls';
 
+import 'react-tabs/style/react-tabs.css';
 import 'reactflow/dist/style.css';
 import './style.css';
 
