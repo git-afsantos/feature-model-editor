@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf8'?>
+<featureModel>
+  <struct>
+    <and abstract="true" mandatory="true" name="/dts-v1/">
+      <feature name="memory" />
+      <alt name="cpus">
+        <feature name="cpu@0" />
+        <feature name="cpu@1" />
+      </alt>
+    </and>
+  </struct>
+  <constraints>
+    <rule>
+      <imp>
+        <var>cpus</var>
+        <var>memory</var>
+      </imp>
+    </rule>
+    <rule>
+      <imp>
+        <var>memory</var>
+        <var>cpus</var>
+      </imp>
+    </rule>
+  </constraints>
+  <vm_config>
+    <configuration name="VM 1">
+      <feature name="/dts-v1/" manual="undefined" automatic="activated" />
+      <feature name="memory" manual="unselected" automatic="undefined" />
+      <feature name="cpus" manual="selected" automatic="undefined" />      
+      <feature name="cpu@0" manual="selected" automatic="undefined" />
+      <feature name="cpu@1" manual="unselected" automatic="undefined" />
+    </configuration>
+    <configuration name="VM 2">
+      <feature name="/dts-v1/" manual="undefined" automatic="activated" />
+      <feature name="memory" manual="selected" automatic="undefined" />
+      <feature name="cpus" manual="selected" automatic="undefined" />      
+      <feature name="cpu@0" manual="unselected" automatic="undefined" />
+      <feature name="cpu@1" manual="selected" automatic="undefined" />
+    </configuration>
+  </vm_config>
+</featureModel>
