@@ -1,0 +1,74 @@
+/* SPDX-License-Identifier: MPL-2.0 */
+/* Copyright © 2024 André Santos */
+
+/*****************************************************************************/
+/* Add Constraint Menu */
+/*****************************************************************************/
+
+.add-constraint-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.add-constraint-menu > .new-constraint {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+}
+
+.add-constraint-menu > .new-constraint > button {
+  flex: 0 0 auto;
+  min-width: 5em;
+}
+
+.add-constraint-menu > .new-constraint > select {
+  flex: 1 0 auto;
+}
+
+.add-constraint-menu > .constraint-variables {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-constraint-menu > .constraint-variables > select {
+  flex: 0 1 auto;
+}
+
+
+/*****************************************************************************/
+/* Constraint List */
+/*****************************************************************************/
+
+.constraint-list {
+  padding-inline-start: 1em;
+}
+
+.constraint-list > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.constraint-list > li button {
+  flex: 0 1 auto;
+  margin-right: 1em;
+  min-width: 2rem;
+  min-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.constraint-list > li button > svg {
+  flex: 1 0 auto;
+  max-width: 1.25rem;
+  max-height: 1.25rem;
+  fill: white;
+}
