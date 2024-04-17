@@ -149,6 +149,9 @@ export class FeatureModelManager {
       delete model.features[name]
       // add feature name to the collection of removed features
       removed.push(name)
+      // remove this feature as a child of its parent
+      if (!feature.parent) { throw new Error('cannot remove the root feature') }
+      removeFromArray(model.features[feature.parent].children, name)
       // remove all configurations of this feature
       for (const configuration of Object.values(model.configurations)) {
         delete configuration.features[name]
