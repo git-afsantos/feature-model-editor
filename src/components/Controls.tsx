@@ -15,8 +15,7 @@ import { askForUniqueConfigurationName } from "./util";
 // Component
 ////////////////////////////////////////////////////////////////////////////////
 
-
-interface ConfigurationEditorProps {
+export interface ControlsProps {
   configurations: ConfigurationMap;
   current: string;
   selectConfiguration: (name: string) => void;
@@ -24,10 +23,11 @@ interface ConfigurationEditorProps {
   cloneConfiguration: (name: string) => void;
   renameConfiguration: (name: string) => void;
   removeConfiguration: () => void;
+  saveConfiguration: () => void;
 }
 
 
-export default function ConfigurationEditor({
+export default function Controls({
   configurations,
   current,
   selectConfiguration,
@@ -35,7 +35,8 @@ export default function ConfigurationEditor({
   cloneConfiguration,
   renameConfiguration,
   removeConfiguration,
-}: ConfigurationEditorProps
+  saveConfiguration,
+}: ControlsProps
 ): JSX.Element {
   const options = useMemo(() => Object.keys(configurations), [configurations])
 
@@ -89,6 +90,7 @@ export default function ConfigurationEditor({
         { options.map((name, i) => <option key={i} value={name}>{name}</option>) }
       </select>
       <div className="toolbar">
+        <button onClick={saveConfiguration}>Save</button>
         <button onClick={addNew}>New (Empty)</button>
         <button onClick={cloneCurrent}>New (Copy)</button>
         <button onClick={renameCurrent}>Rename</button>
