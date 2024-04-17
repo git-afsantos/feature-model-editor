@@ -8,8 +8,8 @@
 import { useCallback } from "react";
 import { Panel } from "reactflow";
 
-import { FeatureType, Ternary } from "../data/types";
-import { FeatureView } from "../logic/FeatureModel";
+import { FeatureType, Ternary } from "../../data/types";
+import { FeatureView } from "../../logic/FeatureModel";
 
 import {
   IconAnd,
@@ -22,7 +22,7 @@ import {
   IconSave,
   IconSelect,
   IconXor,
-} from "./icons";
+} from "../icons";
 
 import './NodeToolbar.css';
 
