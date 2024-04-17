@@ -7,9 +7,9 @@
 
 import { useCallback, useMemo } from "react";
 
-import { ConfigurationMap } from "../../data/types";
+import { ConfigurationMap } from "../data/types";
 
-import { askForUniqueConfigurationName } from "../util";
+import { askForUniqueConfigurationName } from "./util";
 
 ////////////////////////////////////////////////////////////////////////////////
 // Component
