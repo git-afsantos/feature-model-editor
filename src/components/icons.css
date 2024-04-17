@@ -1,0 +1,58 @@
+/* SPDX-License-Identifier: MPL-2.0 */
+/* Copyright © 2024 André Santos */
+
+.icon-delete,
+.icon-edit {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke-linejoin: round;
+  stroke-miterlimit: 2;
+}
+
+.icon-save,
+.icon-select,
+.icon-deselect,
+.icon-inspect-node {
+  fill: none;
+}
+
+.icon-save path {
+  fill: #222;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+
+.icon-mandatory circle,
+.icon-select circle,
+.icon-deselect circle {
+  stroke: #222;
+  stroke-width: 2;
+}
+
+.icon-select path,
+.icon-deselect path {
+  stroke: #222;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-mandatory circle {
+  fill: #222;
+}
+
+.icon-mandatory {
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-inspect-node {
+  stroke: #222;
+}
+
+.icon-inspect-node path {
+  stroke-width: 2;
+  stroke-linecap: round;
+}
