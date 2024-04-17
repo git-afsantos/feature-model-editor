@@ -38,7 +38,7 @@ import './FeatureModelEditor.css';
 
 function buildBlankState(): EditorState {
   const model: FeatureModel = blankFeatureModel()
-  return EditorState.fromFeatureModel(model)
+  return EditorState.fromFeatureModel(model).layout()
 }
 
 
@@ -56,7 +56,7 @@ export default function FeatureModelEditor({ xmlInput, setVolatileInput }: Featu
   const initialState = useMemo(
     () => {
       if (xmlInput == null) { return buildBlankState() }
-      return EditorState.fromFeatureModel(parseFeatureModel(xmlInput))
+      return EditorState.fromFeatureModel(parseFeatureModel(xmlInput)).layout()
     },
     [xmlInput]
   )
@@ -173,7 +173,6 @@ export default function FeatureModelEditor({ xmlInput, setVolatileInput }: Featu
                 setState={setState}
                 redo={redo}
                 canRedo={canRedo}
-                saveModel={save}
               />
             </ReactFlowProvider>
           </div>
