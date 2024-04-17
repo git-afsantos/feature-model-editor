@@ -19,7 +19,6 @@ import {
   IconLayout,
   IconMandatory,
   IconOr,
-  IconSave,
   IconSelect,
   IconXor,
 } from "../icons";
@@ -186,7 +185,6 @@ function buildSelectionButtons(
 
 export interface NodeToolbarProps {
   features: FeatureView[];
-  save(): void;
   refreshLayout(): void;
   changeNodeLabel(id: string): void;
   removeNodes(): void;
@@ -198,7 +196,6 @@ export interface NodeToolbarProps {
 export default function NodeToolbar(
   {
     features,
-    save,
     refreshLayout,
     changeNodeLabel,
     removeNodes,
@@ -246,15 +243,6 @@ export default function NodeToolbar(
       {
         features.length === 0 &&
         <>
-          <button
-            type="button"
-            className="react-flow__controls-button"
-            title="Save"
-            aria-label="save"
-            onClick={save}
-          >
-            <IconSave />
-          </button>
           <button
             type="button"
             className="react-flow__controls-button"

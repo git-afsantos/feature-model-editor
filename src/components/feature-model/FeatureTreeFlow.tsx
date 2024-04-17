@@ -116,11 +116,10 @@ interface FeatureTreeFlowProps {
   setState: SetStateType;
   redo(): void;
   canRedo: boolean;
-  saveModel(): void;
 }
 
 
-export default function FeatureTreeFlow({state, setState, redo, canRedo, saveModel}: FeatureTreeFlowProps) {
+export default function FeatureTreeFlow({state, setState, redo, canRedo}: FeatureTreeFlowProps) {
   const reactFlowWrapper = useRef(null);
   const editorPane: Ref<HTMLDivElement> = useRef(null);
   const updateNodeInternals = useUpdateNodeInternals()
@@ -400,7 +399,6 @@ export default function FeatureTreeFlow({state, setState, redo, canRedo, saveMod
       >
         <NodeToolbar
           features={getFeatures(selectedNodes, state.model)}
-          save={saveModel}
           refreshLayout={refreshLayout}
           changeNodeLabel={changeNodeLabel}
           removeNodes={removeSelectedNodes}
