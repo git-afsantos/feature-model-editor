@@ -377,7 +377,7 @@ export default function FeatureTreeFlow({state, setState, redo, canRedo, saveMod
   // const proOptions = { hideAttribution: true };
 
   return (
-    <div className="workflow diagram" ref={reactFlowWrapper}>
+    <div className="diagram" ref={reactFlowWrapper}>
       <ReactFlow
         ref={editorPane}
         nodes={nodesArray}
