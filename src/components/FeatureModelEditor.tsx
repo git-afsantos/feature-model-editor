@@ -20,7 +20,7 @@ import Controls from './Controls';
 
 import 'react-tabs/style/react-tabs.css';
 import 'reactflow/dist/style.css';
-import './style.css';
+import './FeatureModelEditor.css';
 
 ////////////////////////////////////////////////////////////////////////////////
 // Notes
