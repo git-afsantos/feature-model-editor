@@ -1,0 +1,21 @@
+/* SPDX-License-Identifier: MPL-2.0 */
+/* Copyright © 2024 André Santos */
+
+.feature-tree-flow .toolbar {
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.feature-tree-flow .toolbar button.react-flow__controls-button {
+  color: #222;
+  width: 2rem;
+  height: 2rem;
+}
+
+.feature-tree-flow .toolbar button.react-flow__controls-button svg {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+}
