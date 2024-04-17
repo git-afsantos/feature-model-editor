@@ -85,10 +85,12 @@ export default function Controls({
 
   return (
     <>
-      <p>Choose a configuration:</p>
-      <select value={current} onChange={onSelectConfiguration}>
-        { options.map((name, i) => <option key={i} value={name}>{name}</option>) }
-      </select>
+      <label className="picker">
+        <span>Configuration</span>
+        <select value={current} onChange={onSelectConfiguration}>
+          { options.map((name, i) => <option key={i} value={name}>{name}</option>) }
+        </select>
+      </label>
       <div className="toolbar">
         <button onClick={saveConfiguration}>Save</button>
         <button onClick={addNew}>New (Empty)</button>

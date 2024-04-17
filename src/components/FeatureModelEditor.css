@@ -30,23 +30,14 @@
 }
 
 .model-editor-root > .react-tabs > .feature-tree,
-.model-editor-root > .react-tabs > .configurations,
 .model-editor-root > .react-tabs > .constraints {
   flex: 1 1 auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  gap: 0.5em;
 }
 
-.model-editor-root > .react-tabs > .configurations {
-  gap: 1em;
-}
-
-.model-editor-root > .react-tabs > .configurations > p {
-  margin: 0;
-}
-
-.model-editor-root > .react-tabs > .configurations > pre,
 .model-editor-root > .react-tabs > .constraints > pre {
   flex: 1 1 auto;
   overflow: auto;
@@ -54,11 +45,24 @@
   margin-top: 0;
 }
 
-.model-editor-root > .react-tabs > .configurations > .toolbar {
+.model-editor-root > .react-tabs > .feature-tree > .toolbar {
   display: flex;
   flex-direction: row;
   gap: 1em;
   align-items: flex-start;
+}
+
+.model-editor-root > .react-tabs > .feature-tree > .picker {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
+.model-editor-root > .react-tabs > .feature-tree > .picker > select {
+  flex: 1 0 auto;
+  min-height: 1.5em;
 }
 
 

@@ -153,10 +153,19 @@ export default function FeatureModelEditor({ xmlInput, setVolatileInput }: Featu
         <TabList>
           <Tab>Feature Tree</Tab>
           <Tab>Constraints</Tab>
-          <Tab>Configurations</Tab>
         </TabList>
 
         <TabPanel selectedClassName="feature-tree">
+          <Controls
+            configurations={state.model.data.configurations}
+            current={state.currentConfigurationName}
+            selectConfiguration={selectConfiguration}
+            createConfiguration={createConfiguration}
+            cloneConfiguration={cloneConfiguration}
+            renameConfiguration={renameConfiguration}
+            removeConfiguration={removeConfiguration}
+            saveConfiguration={save}
+          />
           <div className="feature-tree-flow">
             <ReactFlowProvider>
               <FeatureTreeFlow
@@ -168,7 +177,7 @@ export default function FeatureModelEditor({ xmlInput, setVolatileInput }: Featu
               />
             </ReactFlowProvider>
           </div>
-          <div>
+          <div className='toolbar'>
             <button disabled={!canUndo} onClick={undo} title='undo last action'>
               Undo
             </button>
@@ -193,19 +202,6 @@ export default function FeatureModelEditor({ xmlInput, setVolatileInput }: Featu
             features={crossTreeFeatures}
             add={addConstraint}
             remove={removeConstraint}
-          />
-        </TabPanel>
-
-        <TabPanel selectedClassName="configurations">
-          <Controls
-            configurations={state.model.data.configurations}
-            current={state.currentConfigurationName}
-            selectConfiguration={selectConfiguration}
-            createConfiguration={createConfiguration}
-            cloneConfiguration={cloneConfiguration}
-            renameConfiguration={renameConfiguration}
-            removeConfiguration={removeConfiguration}
-            saveConfiguration={save}
           />
         </TabPanel>
       </Tabs>

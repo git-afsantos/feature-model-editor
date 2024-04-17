@@ -2,11 +2,11 @@
 /* Copyright © 2024 André Santos */
 
 #root {
-  width: 90vw;
-  height: 80vh;
+  width: 94vw;
+  height: 90vh;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1vh 1vw;
   text-align: center;
   background-color: white;
 }
