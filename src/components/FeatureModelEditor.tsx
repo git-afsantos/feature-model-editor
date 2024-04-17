@@ -15,7 +15,7 @@ import { FeatureModel, LogicExpression } from '../data/types';
 import EditorState from '../logic/EditorState';
 
 import ConstraintEditor from './feature-model/ConstraintEditor';
-import Flow from './feature-model/Flow';
+import FeatureTreeFlow from './feature-model/FeatureTreeFlow';
 import Controls from './Controls';
 
 import 'react-tabs/style/react-tabs.css';
@@ -159,7 +159,7 @@ export default function FeatureModelEditor({ xmlInput, setVolatileInput }: Featu
         <TabPanel selectedClassName="feature-tree">
           <div className="feature-tree-flow">
             <ReactFlowProvider>
-              <Flow
+              <FeatureTreeFlow
                 state={state}
                 setState={setState}
                 redo={redo}

@@ -111,7 +111,7 @@ function getFeatures(nodes: FeatureNode[], model: FeatureModelManager): FeatureV
 ////////////////////////////////////////////////////////////////////////////////
 
 
-interface FlowProps {
+interface FeatureTreeFlowProps {
   state: EditorState;
   setState: SetStateType;
   redo(): void;
@@ -120,7 +120,7 @@ interface FlowProps {
 }
 
 
-export default function Flow({state, setState, redo, canRedo, saveModel}: FlowProps) {
+export default function FeatureTreeFlow({state, setState, redo, canRedo, saveModel}: FeatureTreeFlowProps) {
   const reactFlowWrapper = useRef(null);
   const editorPane: Ref<HTMLDivElement> = useRef(null);
   const updateNodeInternals = useUpdateNodeInternals()
