@@ -13,12 +13,12 @@ import { FeatureNodeData } from "../../logic/EditorState";
 // Component
 ////////////////////////////////////////////////////////////////////////////////
 
-export interface RootNodeProps extends NodeProps {
+export interface RootNodeComponentProps extends NodeProps {
   data: FeatureNodeData;
 }
 
 
-export default function RootNode({ data }: NodeProps) {
+export default function RootNodeComponent({ data }: NodeProps) {
   return (
     <>
       <div className="label">{data.label}</div>
